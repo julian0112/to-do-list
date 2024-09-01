@@ -5,3 +5,4 @@ class TagSerializer(serializers.ModelSerializer):
     class Meta:
         model = tags
         fields = '__all__'
+        # fields = ('id', 'title', 'desc')
