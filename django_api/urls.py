@@ -16,11 +16,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from rest_framework.documentation import include_docs_urls
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('tags/', include('tags.urls')),
     path('lists/', include('lists.urls')),
-    path('tasks/', include('tasks.urls'))
+    path('tasks/', include('tasks.urls')),
+    path('docs/', include_docs_urls(title='Tags API'))
 ]
